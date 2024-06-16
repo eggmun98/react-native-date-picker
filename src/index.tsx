@@ -144,7 +144,9 @@ const DateBlock: React.FC<DateBlockProps> = ({
   };
 
   useEffect(() => {
-    snapScrollToIndex(value - digits[0]);
+    setTimeout(() => {
+      snapScrollToIndex(value - digits[0]);
+    }, 100);
   }, [scrollRef.current]);
 
   const handleMomentumScrollEnd = ({ nativeEvent }: any) => {
